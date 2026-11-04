@@ -128,7 +128,6 @@
     "arrangement.sections.sections": "Секции",
     "arrangement.sections.select_section": "Выделить секцию",
     "arrangement.send": "Посыл {0} · {1}",
-    "arrangement.sends.show_sends_in_track_headers": "Показывать посылы в заголовках треков",
     "arrangement.takes.delete_take": "Удалить дубль",
     "arrangement.takes.flatten_takes": "Свести дубли",
     "arrangement.takes.hide_takes": "Скрыть дубли",
