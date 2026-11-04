@@ -16,19 +16,19 @@ request to this repository: no build of Nota, no waiting for a release.
   The English text of each key is Nota's *English reference*,
   [`en.json`](https://github.com/nota-daw/nota/blob/develop/src/managed/Nota.Application/Localization/en.json)
   in the Nota repository.
-- **References.** [`reference/`](reference/) holds a copy of the English reference for every
-  Nota release (`reference/0.59.0.json` …) and for the code in progress
-  (`reference/develop.json`). They are pulled from Nota automatically — never edit them.
+- **References.** The [`published`](../../tree/published) branch holds a copy of the English
+  reference for every Nota release (`reference/0.59.0.json` …) and for the code in progress
+  (`reference/develop.json`). They are pulled from Nota automatically.
 - **Languages.** [`languages/<code>.json`](languages/) translates the keys of the references.
   A file may be partial: anything missing shows in English.
-- **Index.** [`index.json`](index.json) is what Nota reads: each language with its version,
-  checksum and how complete it is for each Nota version. It is generated after every merge —
-  never edit it.
+- **Index.** `index.json` on the `published` branch is what Nota reads: each language with its
+  version, checksum and how complete it is for each Nota version. It is generated after every
+  merge; nobody edits `published` by hand.
 
 ## Fix or complete a translation
 
 1. Open `languages/<code>.json` and find the key. Its English is the same key in
-   [`reference/develop.json`](reference/develop.json) (texts Nota has today) or in the
+   [`reference/develop.json`](../../blob/published/reference/develop.json) (texts Nota has today) or in the
    reference of the release you use.
 2. Change the text. Keep every placeholder — `{0}`, `{1}`, possibly with a format such as
    `{0:0.0}` — in any order; write a literal brace as `{{` or `}}`.

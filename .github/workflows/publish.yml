@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: AGPL-3.0-only
-# Publishes what Nota reads: pulls new English references from Nota's release tags and develop,
-# checks every language, and regenerates index.json with each file pinned at the commit that
-# holds it (Nota downloads <commit>/<path>, so a file always matches its sha256). Commits only
-# reference/ and index.json, as github-actions[bot] — the ruleset on main lets GitHub Actions
-# through for this. Runs after every merge, daily (new Nota releases), and on demand.
+# Publishes what Nota reads, on the `published` branch: Nota's English references (pulled from
+# its release tags and develop) and index.json, with each language file pinned at the main
+# commit that holds it (Nota downloads <commit>/<path>, so a file always matches its sha256).
+# main stays under pull requests with no bypass; only this workflow writes `published`, which
+# holds generated files only. Runs after every merge, daily (new Nota releases), and on demand.
 name: Publish
 
 on:
@@ -26,22 +26,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Start from what is published
+        run: |
+          if git ls-remote --exit-code --heads origin published >/dev/null; then
+            git worktree add published origin/published
+            git -C published switch -c published
+          else
+            git worktree add --orphan -b published published
+          fi
+          mkdir -p reference
+          if [ -d published/reference ]; then cp published/reference/*.json reference/ 2>/dev/null || true; fi
+          if [ -f published/index.json ]; then cp published/index.json index.json; fi
       - name: Pull Nota's English references
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 tools/sync_references.py
       - name: Check languages and write index.json
-        # The language files at HEAD are the ones published: the bot commit below changes
-        # only reference/ and index.json, so HEAD is the commit Nota fetches them from.
+        # The language files are published from main's HEAD: Nota fetches <commit>/languages/….
         run: python3 tools/validate.py --write-index "$(git rev-parse HEAD)"
-      - name: Commit references and index
+      - name: Commit to published
         run: |
-          git add reference index.json
+          rm -rf published/reference && cp -r reference published/reference
+          cp index.json published/index.json
+          cd published
+          git add -A reference index.json
           if git diff --cached --quiet; then echo "nothing to publish"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Publish references and index"
-          git push
+          git commit -m "Publish references and index for main $(git -C .. rev-parse --short HEAD)"
+          git push origin published
