@@ -1,0 +1,47 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Publishes what Nota reads: pulls new English references from Nota's release tags and develop,
+# checks every language, and regenerates index.json with each file pinned at the commit that
+# holds it (Nota downloads <commit>/<path>, so a file always matches its sha256). Commits only
+# reference/ and index.json, as github-actions[bot] — the ruleset on main lets GitHub Actions
+# through for this. Runs after every merge, daily (new Nota releases), and on demand.
+name: Publish
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pull Nota's English references
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/sync_references.py
+      - name: Check languages and write index.json
+        # The language files at HEAD are the ones published: the bot commit below changes
+        # only reference/ and index.json, so HEAD is the commit Nota fetches them from.
+        run: python3 tools/validate.py --write-index "$(git rev-parse HEAD)"
+      - name: Commit references and index
+        run: |
+          git add reference index.json
+          if git diff --cached --quiet; then echo "nothing to publish"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish references and index"
+          git push

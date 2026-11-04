@@ -1,0 +1,31 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Checks every pull request: the checker against its fixtures (the same verdicts Nota's smoke
+# test holds), then every language against Nota's English references, pulled fresh so a
+# translation is checked against the texts Nota has today.
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: The checker agrees with its fixtures
+        run: python3 tools/validate.py --fixtures tools/fixtures
+      - name: Pull Nota's English references
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/sync_references.py
+      - name: Check every language
+        run: python3 tools/validate.py
