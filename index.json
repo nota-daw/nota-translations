@@ -1,0 +1,21 @@
+{
+  "formatVersion": 1,
+  "generated": "2026-11-04T09:48:37Z",
+  "references": {
+    "develop": "39743443ede2ea12"
+  },
+  "languages": [
+    {
+      "code": "fr",
+      "name": "Français",
+      "version": 1,
+      "commit": "8f9a1f1002bed0b8e260b80aabae4131487a4410",
+      "path": "languages/fr.json",
+      "size": 347183,
+      "sha256": "7f63a3c3f292751d10c1a1bdc0b620f5b45728f0502b3e5e00056491a0707df1",
+      "coverage": {
+        "39743443ede2ea12": 100
+      }
+    }
+  ]
+}
