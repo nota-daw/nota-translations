@@ -1,8 +1,8 @@
 {
   "formatVersion": 1,
-  "generated": "2026-11-04T09:48:37Z",
+  "generated": "2026-11-04T14:18:20Z",
   "references": {
-    "develop": "39743443ede2ea12"
+    "develop": "faa76cdf84715362"
   },
   "languages": [
     {
@@ -14,7 +14,19 @@
       "size": 347183,
       "sha256": "7f63a3c3f292751d10c1a1bdc0b620f5b45728f0502b3e5e00056491a0707df1",
       "coverage": {
-        "39743443ede2ea12": 100
+        "faa76cdf84715362": 99
+      }
+    },
+    {
+      "code": "ru",
+      "name": "Русский",
+      "version": 1,
+      "commit": "ab08770aa90091da89472912e40ee9a128f8a584",
+      "path": "languages/ru.json",
+      "size": 432323,
+      "sha256": "e71cd9ae78044edd19a54105b3549e40d0bb6be9cf6d75a954af60bc5cdf39f9",
+      "coverage": {
+        "faa76cdf84715362": 100
       }
     }
   ]
