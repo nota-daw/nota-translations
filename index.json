@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "generated": "2026-11-06T12:11:11Z",
+  "generated": "2026-11-07T18:43:17Z",
   "references": {
     "0.59.1": "3c1378e92a423569",
     "develop": "f78e8241e9ba25e8"
@@ -9,14 +9,14 @@
     {
       "code": "fr",
       "name": "Français",
-      "version": 2,
-      "commit": "afc3aeb8c3fb6010d3fe1ebac62b1ec04e67a930",
+      "version": 3,
+      "commit": "be926c51f25654469e0b3b20e06d27be570dbd82",
       "path": "languages/fr.json",
-      "size": 358711,
-      "sha256": "74b48c2f4780d1b5f6a239e0b596a9f7451429466dd68f9c0be51ed91ac7b638",
+      "size": 366664,
+      "sha256": "339a197f4629bd47bfe91c276016948b00b8b95eb008f925b17e5ecdf3d32191",
       "coverage": {
-        "3c1378e92a423569": 99,
-        "f78e8241e9ba25e8": 97
+        "3c1378e92a423569": 100,
+        "f78e8241e9ba25e8": 100
       }
     },
     {
