@@ -1,8 +1,9 @@
 {
   "formatVersion": 1,
-  "generated": "2026-11-07T18:43:17Z",
+  "generated": "2026-11-08T11:20:32Z",
   "references": {
     "0.59.1": "3c1378e92a423569",
+    "0.59.2": "f78e8241e9ba25e8",
     "develop": "f78e8241e9ba25e8"
   },
   "languages": [
