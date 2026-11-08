@@ -2430,7 +2430,7 @@
     "main.recovery.recover_project": "Récupérer le projet",
     "main.recovery.recovered_unsaved_work": "Travail non enregistré récupéré.",
     "main.recovery.unsaved_changes": "Modifications non enregistrées",
-    "main.recovery.unsaved_changes_n": "modifications non enregistrées · {0}",
+    "main.recovery.unsaved_changes_n": "non enregistré · {0}",
     "main.redo": "Rétablir",
     "main.remote": "Télécommande",
     "main.remote.phones_connected": { "one": "{0} téléphone connecté", "other": "{0} téléphones connectés" },
