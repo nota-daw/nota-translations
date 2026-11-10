@@ -1,10 +1,10 @@
 {
   "formatVersion": 1,
-  "generated": "2026-11-09T06:08:32Z",
+  "generated": "2026-11-10T12:43:13Z",
   "references": {
     "0.59.1": "3c1378e92a423569",
     "0.59.2": "f78e8241e9ba25e8",
-    "develop": "f78e8241e9ba25e8"
+    "develop": "2db876a0d3058b9d"
   },
   "languages": [
     {
@@ -17,7 +17,8 @@
       "sha256": "b8d73a0ae66872c8f86e2f1ed858c9ed37096e9cd56f89bd66d6a08e195d0d54",
       "coverage": {
         "3c1378e92a423569": 100,
-        "f78e8241e9ba25e8": 100
+        "f78e8241e9ba25e8": 100,
+        "2db876a0d3058b9d": 90
       }
     },
     {
@@ -30,7 +31,8 @@
       "sha256": "cb27e38156b4f80e7f91a477ceb22022d89374ac9d48f18bf1a74575512ca364",
       "coverage": {
         "3c1378e92a423569": 96,
-        "f78e8241e9ba25e8": 94
+        "f78e8241e9ba25e8": 94,
+        "2db876a0d3058b9d": 86
       }
     }
   ]
