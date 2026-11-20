@@ -2399,6 +2399,7 @@
     "main.detail.back_to_the_split_f": "Назад к разделённому виду (⌘⇧F)",
     "main.detail.clip_editor_every_clip_on": "Редактор клипа: все клипы на треке",
     "main.detail.clip_editor_one_clip": "Редактор клипа: один клип",
+    "main.detail.empty_slot": "Слот пустой — выберите клип, чтобы редактировать его здесь",
     "main.detail.group": "Группа {0}",
     "main.detail.in": "Вход ",
     "main.detail.inst": "Инстр. ",
