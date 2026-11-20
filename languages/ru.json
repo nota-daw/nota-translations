@@ -2405,6 +2405,7 @@
     "main.detail.inst": "Инстр. ",
     "main.detail.midi_from": "MIDI от ",
     "main.detail.monitor_in": "Мониторинг входа",
+    "main.detail.no_clip_selected": "На этом треке клип не выбран — щёлкните клип, чтобы редактировать его здесь",
     "main.detail.pdc_ms": "PDC {0:0.0} мс",
     "main.detail.select_a_clip_to_edit": "Выделите клип, чтобы править его.",
     "main.detail.select_a_midi_clip_on": "Выделите MIDI-клип на треке Drum Rack, чтобы расставлять шаги.",
