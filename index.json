@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "generated": "2026-11-22T11:19:48Z",
+  "generated": "2026-11-22T11:22:58Z",
   "references": {
     "0.59.1": "3c1378e92a423569",
     "0.59.2": "f78e8241e9ba25e8",
@@ -62,11 +62,11 @@
     {
       "code": "ru",
       "name": "Русский",
-      "version": 6,
-      "commit": "207eab1eb00e12b16bb211c4c8d3823daba70791",
+      "version": 7,
+      "commit": "bfa45698ecb082677d729c9c46be4312e7b39b63",
       "path": "languages/ru.json",
-      "size": 459608,
-      "sha256": "27c0c3a25536a5643758eac04b2430690213fb57f13c5f3baa8cb2ebd749124e",
+      "size": 459712,
+      "sha256": "b612e81169155b916a5ea57541b1a073b73289b40d57daad0690a1fe29c36f42",
       "coverage": {
         "3c1378e92a423569": 96,
         "f78e8241e9ba25e8": 94,
