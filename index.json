@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "generated": "2026-11-21T12:44:39Z",
+  "generated": "2026-11-22T10:52:11Z",
   "references": {
     "0.59.1": "3c1378e92a423569",
     "0.59.2": "f78e8241e9ba25e8",
@@ -12,35 +12,67 @@
   },
   "languages": [
     {
+      "code": "cs",
+      "name": "Čeština",
+      "version": 1,
+      "commit": "d288f344be62a3903b1686454170aee2d04ad92a",
+      "path": "languages/cs.json",
+      "size": 377571,
+      "sha256": "1074ec4635116adc9f893fe75e50996f9b329656816a16fa3eb5f4e66f9de56f",
+      "coverage": {
+        "3c1378e92a423569": 92,
+        "f78e8241e9ba25e8": 92,
+        "3d6aecabec3cefd3": 100,
+        "8391b66c4d6e0777": 98,
+        "7cad3bad7c27aee8": 92
+      }
+    },
+    {
       "code": "fr",
       "name": "Français",
-      "version": 4,
-      "commit": "bd32dd07f7a61a20d3ec61bf56e061966e8062af",
+      "version": 5,
+      "commit": "d288f344be62a3903b1686454170aee2d04ad92a",
       "path": "languages/fr.json",
-      "size": 366551,
-      "sha256": "b8d73a0ae66872c8f86e2f1ed858c9ed37096e9cd56f89bd66d6a08e195d0d54",
+      "size": 407474,
+      "sha256": "d275ade011bd6bf5bfb59c25c8176eb5ba6bee9494c7759927ae286300ec2971",
       "coverage": {
         "3c1378e92a423569": 100,
         "f78e8241e9ba25e8": 100,
-        "3d6aecabec3cefd3": 84,
-        "8391b66c4d6e0777": 83,
-        "7cad3bad7c27aee8": 77
+        "3d6aecabec3cefd3": 95,
+        "8391b66c4d6e0777": 94,
+        "7cad3bad7c27aee8": 88
+      }
+    },
+    {
+      "code": "id",
+      "name": "Bahasa Indonesia",
+      "version": 1,
+      "commit": "d288f344be62a3903b1686454170aee2d04ad92a",
+      "path": "languages/id.json",
+      "size": 12852,
+      "sha256": "8ee211979a95dec1a93e5d6b7704238a54f340bdc2db1abf7510067ff1b7da40",
+      "coverage": {
+        "3c1378e92a423569": 5,
+        "f78e8241e9ba25e8": 5,
+        "3d6aecabec3cefd3": 4,
+        "8391b66c4d6e0777": 4,
+        "7cad3bad7c27aee8": 4
       }
     },
     {
       "code": "ru",
       "name": "Русский",
-      "version": 2,
-      "commit": "afc3aeb8c3fb6010d3fe1ebac62b1ec04e67a930",
+      "version": 3,
+      "commit": "d288f344be62a3903b1686454170aee2d04ad92a",
       "path": "languages/ru.json",
-      "size": 431668,
-      "sha256": "cb27e38156b4f80e7f91a477ceb22022d89374ac9d48f18bf1a74575512ca364",
+      "size": 439077,
+      "sha256": "de4f785c04b7ca1ea34dadba5cb54cae96e3cf3b0a418a242f9cb84717ba2ac8",
       "coverage": {
         "3c1378e92a423569": 96,
         "f78e8241e9ba25e8": 94,
         "3d6aecabec3cefd3": 80,
-        "8391b66c4d6e0777": 79,
-        "7cad3bad7c27aee8": 73
+        "8391b66c4d6e0777": 80,
+        "7cad3bad7c27aee8": 75
       }
     }
   ]
