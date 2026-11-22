@@ -4219,6 +4219,7 @@
     "transport.no_take_to_discard": "Ничего не записывается — нечего сбрасывать.",
     "transport.paused_play_carries_on_from": "Пауза · воспроизведение продолжится отсюда",
     "transport.recording_didnt_start": "Запись не началась.",
+    "transport.recording_session_performance": "● Запись исполнения из Session…",
     "transport.take_discarded_retrying": "● Дубль сброшен — запись заново…",
     "transport.tempo_automated": "Темп следует автоматизации Tempo на мастер-треке",
     "transport.time": "время",
