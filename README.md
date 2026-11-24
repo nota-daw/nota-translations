@@ -10,6 +10,7 @@ request to this repository: no build of Nota, no waiting for a release.
 |---|---|
 | Français | [`languages/fr.json`](languages/fr.json) |
 | Русский | [`languages/ru.json`](languages/ru.json) |
+| 简体中文 | [`languages/zh.json`](languages/zh.json) |
 
 ## How it fits together
 
